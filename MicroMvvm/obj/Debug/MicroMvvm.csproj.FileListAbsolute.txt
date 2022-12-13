@@ -1,0 +1,6 @@
+D:\WorkSpace\IKM QUIZ\MicroMvvm\bin\Debug\MicroMvvm.dll
+D:\WorkSpace\IKM QUIZ\MicroMvvm\bin\Debug\MicroMvvm.pdb
+D:\WorkSpace\IKM QUIZ\MicroMvvm\obj\Debug\MicroMvvm.csproj.AssemblyReference.cache
+D:\WorkSpace\IKM QUIZ\MicroMvvm\obj\Debug\MicroMvvm.csproj.CoreCompileInputs.cache
+D:\WorkSpace\IKM QUIZ\MicroMvvm\obj\Debug\MicroMvvm.dll
+D:\WorkSpace\IKM QUIZ\MicroMvvm\obj\Debug\MicroMvvm.pdb

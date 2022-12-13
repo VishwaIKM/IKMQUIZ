@@ -1,0 +1,74 @@
+﻿<Window x:Class="QUIZ.View.StartUpWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QUIZ.View"
+        mc:Ignorable="d"
+        Title="Select Role" Height="480" Width="480"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" xmlns:viewmodel="clr-namespace:QUIZ.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:LoginViewModel}"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None">
+    
+    <Grid>
+        <StackPanel>
+            <materialDesign:Card Padding="22" Margin="50">
+                <Button
+                    Margin="0 0 0 0"
+                    x:Name="btn_CandidateLogin"
+                    Style="{StaticResource MaterialDesignFlatMidBgButton}"
+                    materialDesign:ElevationAssist.Elevation="Dp16"
+                    Height="53"
+                    Width="300"
+                    IsEnabled="{Binding IsLoginButtonEnable}"
+                    materialDesign:ButtonAssist.CornerRadius="12"
+                    FontSize="20"
+                    Content="Candidate Login"
+                    Command="{Binding LoginCommand}" Click="btn_CandidateLogin_Click"
+                    />
+            </materialDesign:Card>
+            <materialDesign:Card Padding="22" Margin="50">
+                <Button
+                    Margin="0 0 0 0"
+                    x:Name="btn_AdminLogin"
+                    Style="{StaticResource MaterialDesignFlatMidBgButton}"
+                    materialDesign:ElevationAssist.Elevation="Dp16"
+                    Height="53"
+                    Width="300"
+                    IsEnabled="{Binding IsLoginButtonEnable}"
+                    materialDesign:ButtonAssist.CornerRadius="12"
+                    FontSize="20"
+                    Content="Admin Login"
+                    Command="{Binding LoginCommand}" Click="btn_AdminLogin_Click"
+                    />
+            </materialDesign:Card>
+            <TextBlock Style="{DynamicResource MaterialDesignBody2TextBlock}"
+                       Text=" ** Please Select the Appropriate Role."/>
+        </StackPanel>
+        <Grid Margin="10">
+            <Button
+                HorizontalAlignment="Right"
+                VerticalAlignment="Bottom"
+                    Margin="0 0 0 0"
+                    x:Name="Exit_Btn"
+                    Style="{StaticResource MaterialDesignFlatButton}"
+                    materialDesign:ElevationAssist.Elevation="Dp16"
+                    Height="53"
+                    Width="66"
+                    IsEnabled="{Binding IsLoginButtonEnable}"
+                    materialDesign:ButtonAssist.CornerRadius="12"
+                    FontSize="20"
+                    Content="Exit"
+                    Click="Exit_Btn_Click"
+                    />
+        </Grid>
+        
+    </Grid>
+</Window>

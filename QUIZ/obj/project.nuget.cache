@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "RMds7tY1po7UWXtU3s7tyiC/cAMwNGkQGWEtid/OGXheS7uoHkqunYB+dP/ZlCIrRcZ3mU7q79zMUyglrZL+aw==",
+  "success": true,
+  "projectFilePath": "D:\\WorkSpace\\IKM QUIZ\\QUIZ\\QUIZ.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Administrator\\.nuget\\packages\\materialdesigncolors\\2.0.9\\materialdesigncolors.2.0.9.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\materialdesignthemes\\4.6.1\\materialdesignthemes.4.6.1.nupkg.sha512"
+  ],
+  "logs": []
+}

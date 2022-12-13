@@ -1,0 +1,128 @@
+﻿<Window x:Class="QUIZ.View.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QUIZ"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:LoginViewModel="clr-namespace:QUIZ.ViewModel"
+        mc:Ignorable="d"
+        Title="Login" Height="720" Width="560"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="{x:Null}"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen">
+    <Window.DataContext>
+        <LoginViewModel:LoginViewModel/>
+    </Window.DataContext>
+    <materialDesign:Card 
+        UniformCornerRadius="15"
+        Background="{DynamicResource MaterialDesignPaper}"
+        Margin="25"
+        materialDesign:ElevationAssist.Elevation="Dp4">
+        <materialDesign:DialogHost 
+            CloseOnClickAway="True" 
+            x:Name="DialogHost">
+            <StackPanel>
+                <materialDesign:PopupBox 
+                    HorizontalAlignment="Right"
+                    Margin="0 20 20 0"
+                    PlacementMode="BottomAndAlignRightEdges"
+                    StaysOpen="False"
+                    Height="25">
+                    <StackPanel>
+                        <StackPanel
+                        Margin="16 10 0 6"
+                        Orientation="Horizontal"
+                        HorizontalAlignment="Center">
+                            <TextBlock 
+                            VerticalAlignment="Center"
+                            Text="Dark Mode"
+                            />
+                            <ToggleButton
+                                 Cursor="Hand"
+                                 ToolTip="Enable darkMode"
+                                 Margin="12 0 8 0"
+                                 x:Name="themeToggle"
+                                 IsChecked="{Binding IsDarkTheme}"
+                                 Command="{Binding ToggleCommand}"
+                             />
+                        </StackPanel>
+                        <Button 
+                            ToolTip="Having Trouble Logging In?"
+                            Margin="0 8 0 0"
+                            Content="Help!"
+                            />
+                        <Button
+                            x:Name="btn_exit"
+                            ToolTip="Close Application"
+                            Content="Exit"
+                            Command="{Binding ExitAppCommand}"/>
+                    </StackPanel>
+                </materialDesign:PopupBox>
+
+                <Image 
+                    Margin="0 60 0 5"
+                    Source="Images/logo.png"
+                    Height="100"/>
+                <TextBlock 
+                    Margin="0 25 0 5"
+                    HorizontalAlignment="Center"
+                    FontSize="28"
+                    FontWeight="Bold"
+                    Text="IKM QUIZ ADMIN PANEL"
+                    />
+                <TextBlock 
+                    FontSize="17"
+                    FontWeight="SemiBold"
+                    HorizontalAlignment="Center"
+                    Text="Aptitude Test Preparation for Pre-employment Assessments"/>
+                <TextBox 
+                    Margin="0 50 0 0"
+                    Text="{Binding UserID}"
+                    Width="300"
+                    FontSize="18"
+                    materialDesign:HintAssist.Hint="Enter User ID"
+                    BorderThickness="2"
+                    BorderBrush="{DynamicResource MaterialDesignDivider}"
+                    Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
+                <TextBox 
+                    Margin="0 20 0 0"
+                    Text="{Binding Password}"
+                    Width="300"
+                    FontSize="18"
+                    materialDesign:HintAssist.Hint="Enter Password"
+                    BorderThickness="2"
+                    BorderBrush="{DynamicResource MaterialDesignDivider}"
+                    Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
+                <Button
+                    Margin="0 20 0 0"
+                    x:Name="btn_login"
+                    Style="{StaticResource MaterialDesignFlatMidBgButton}"
+                    materialDesign:ElevationAssist.Elevation="Dp0"
+                    Height="53"
+                    Width="300"
+                    IsEnabled="{Binding IsLoginButtonEnable}"
+                    materialDesign:ButtonAssist.CornerRadius="10"
+                    FontSize="18"
+                    Content="LOG IN"
+                    Command="{Binding LoginCommand}"
+                    />
+                <Button
+                    Margin="0 20 0 0"
+                    x:Name="btn_Signup"
+                    Style="{StaticResource MaterialDesignFlatButton}"
+                    materialDesign:ElevationAssist.Elevation="Dp0"
+                    Height="53"
+                    Width="300"
+                    materialDesign:ButtonAssist.CornerRadius="10"
+                    FontSize="18"
+                    Content="BACK TO ROLE PAGE" Click="btn_Signup_Click"
+                    />
+            </StackPanel>
+        </materialDesign:DialogHost>
+
+    </materialDesign:Card>
+</Window>
+
