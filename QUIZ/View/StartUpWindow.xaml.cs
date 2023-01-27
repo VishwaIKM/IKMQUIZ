@@ -36,6 +36,8 @@ namespace QUIZ.View
         private void btn_CandidateLogin_Click(object sender, RoutedEventArgs e)
         {
             this.Hide();
+            General.CandidateTestStartvalue = 1;
+            General.CandidateTestStart = DateTime.Now;
             General.S_CandidateDashboard_Instance.Show();
 
 

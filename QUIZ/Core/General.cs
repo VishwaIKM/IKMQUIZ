@@ -9,6 +9,8 @@ namespace QUIZ.Core
 {
     public class General
     {
+        public static DateTime CandidateTestStart;
+        public static int CandidateTestStartvalue =0 ;
         public static StartUpWindow S_StartUpWindow_Instance;
         public static LoginWindow S_LoginWindow_Instance = new LoginWindow();
         public static CandidateDashboardWindow S_CandidateDashboard_Instance = new CandidateDashboardWindow();
